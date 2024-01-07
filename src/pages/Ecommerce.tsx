@@ -12,6 +12,7 @@ import {
 import { IoIosMore } from "react-icons/io";
 import product9 from "../data/product9.jpg";
 import SparkLine from "../charts/SparkLine";
+import Stacked from "../charts/Stacked";
 
 const Ecommerce = () => {
   const currentMode = "Dark";
@@ -117,9 +118,9 @@ const Ecommerce = () => {
                 />
               </div>
             </div>
-            {/* <div>
-              <Stacked currentMode={currentMode} width="320px" height="360px" />
-            </div> */}
+            <div>
+              <Stacked width="280px" height="320px" />
+            </div>
           </div>
         </div>
         <div>
