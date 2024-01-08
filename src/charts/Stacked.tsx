@@ -32,13 +32,13 @@ const data = {
       label: "Budget",
       data: array1,
       backgroundColor: "#00bdae",
-      hoverBackgroundColor:"#a3f0ea"
+      hoverBackgroundColor: "#a3f0ea",
     },
     {
       label: "Expense",
       data: array2,
       backgroundColor: "#404041",
-      hoverBackgroundColor:"#b9b9bd"
+      hoverBackgroundColor: "#b9b9bd",
     },
   ],
 };
@@ -57,36 +57,8 @@ const options = {
         usePointStyle: true,
       },
     },
-    plugins: {
-      tooltip: {
-        usePointStyle: true,
-        callbacks: {
-          title: function (tooltipItem: any, data: any) {
-            console.log(tooltipItem);
-            return data["labels"][tooltipItem[0]["index"]];
-          },
-          // label: function (tooltipItem:any, data:any) {
-          //   return data['datasets'][0]['data'][tooltipItem['index']];
-          // },
-          // afterLabel: function (tooltipItem:any, data:any) {
-          //   var dataset = data['datasets'][0];
-          //   var percent = Math.round((dataset['data'][tooltipItem['index']] / dataset["_meta"][0]['total']) * 100)
-          //   return ' (' + percent + '%)';
-          // }
-          labelPointStyle: function (context: any) {
-            return {
-              pointStyle: "triangle",
-              rotation: 0,
-            };
-          },
-        },
-        backgroundColor: "#FFF",
-        titleFontSize: 16,
-        titleFontColor: "#0066ff",
-        bodyFontColor: "#000",
-        bodyFontSize: 14,
-        displayColors: false,
-      },
+    tooltip: {
+      usePointStyle: true,
     },
   },
   responsive: true,

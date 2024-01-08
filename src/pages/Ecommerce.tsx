@@ -4,6 +4,7 @@ import welcomeBg from "../data/welcome-bg.svg";
 
 import Button from "../components/costum-elements/Button";
 import {
+  SparklineAreaData,
   earningData,
   medicalproBranding,
   recentTransactions,
@@ -13,6 +14,7 @@ import { IoIosMore } from "react-icons/io";
 import product9 from "../data/product9.jpg";
 import SparkLine from "../charts/SparkLine";
 import Stacked from "../charts/Stacked";
+import BarChart from "../charts/BarChart";
 
 const Ecommerce = () => {
   const currentMode = "Dark";
@@ -139,17 +141,14 @@ const Ecommerce = () => {
               </div>
             </div>
 
-            {/* <div className="mt-4">
-              <SparkLine
-                "blue"={"blue"}
-                id="column-sparkLine"
+            <div className="mt-4">
+              <BarChart
                 height="100px"
-                type="Column"
-                data={SparklineAreaData}
-                width="320"
-                color="rgb(242, 252, 253)"
+                width="320px"
+                chartData={SparklineAreaData}
+                color={"white"}
               />
-            </div> */}
+            </div>
           </div>
 
           <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
