@@ -8,12 +8,11 @@ import {
   LineElement,
 } from "chart.js";
 
-Chart.register( LinearScale, PointElement, LineElement);
+Chart.register(LinearScale, PointElement, LineElement);
 
 function SparkLine() {
   return (
     <div className="chart-container">
-      <h2 style={{ textAlign: "center" }}>Line Chart</h2>
       <Line
         data={{
           datasets: [
@@ -32,6 +31,12 @@ function SparkLine() {
           ],
         }}
         options={{
+          plugins: {
+            tooltip: {
+              enabled: false,
+            },
+            legend: { display: false },
+          },
           scales: {
             x: {
               type: "linear",
