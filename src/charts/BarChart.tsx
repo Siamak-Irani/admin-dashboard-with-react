@@ -29,7 +29,7 @@ const BarChart = ({ chartData, color, width, height }: BarChartProps) => {
       {
         data: chartData,
         backgroundColor: color,
-        barPercentage: 1.1
+        barPercentage: 1.1,
       },
     ],
     labels: ["5", "5", "6", "5", "2"],
@@ -41,6 +41,9 @@ const BarChart = ({ chartData, color, width, height }: BarChartProps) => {
       legend: { display: false },
       tooltip: {
         enabled: false,
+      },
+      datalabels: {
+        display: false,
       },
     },
 

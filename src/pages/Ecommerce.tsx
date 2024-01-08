@@ -1,11 +1,14 @@
 import { BsCurrencyDollar } from "react-icons/bs";
 
+
+
 import welcomeBg from "../data/welcome-bg.svg";
 
 import Button from "../components/costum-elements/Button";
 import {
   SparklineAreaData,
   earningData,
+  ecomPieChartData,
   medicalproBranding,
   recentTransactions,
   weeklyStats,
@@ -15,6 +18,7 @@ import product9 from "../data/product9.jpg";
 import SparkLine from "../charts/SparkLine";
 import Stacked from "../charts/Stacked";
 import BarChart from "../charts/BarChart";
+import DoughnutChart from "../charts/DoughnutChart";
 
 const Ecommerce = () => {
   const currentMode = "Dark";
@@ -157,14 +161,15 @@ const Ecommerce = () => {
               <p className="text-gray-400">Yearly sales</p>
             </div>
 
-            {/* <div className="w-40">
-              <Pie
+            <div className="w-40">
+              {/* <Pie
                 id="pie-chart"
                 data={ecomPieChartData}
                 legendVisiblity={false}
                 height="160px"
-              />
-            </div> */}
+              /> */}
+              <DoughnutChart chartData={ecomPieChartData} height="160px" />
+            </div>
           </div>
         </div>
       </div>

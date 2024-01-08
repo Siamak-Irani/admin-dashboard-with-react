@@ -36,6 +36,9 @@ function SparkLine() {
               enabled: false,
             },
             legend: { display: false },
+            datalabels: {
+              display: false,
+            },
           },
           scales: {
             x: {

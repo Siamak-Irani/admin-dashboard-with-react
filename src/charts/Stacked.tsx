@@ -60,6 +60,9 @@ const options = {
     tooltip: {
       usePointStyle: true,
     },
+    datalabels: {
+      display: false,
+    },
   },
   responsive: true,
   scales: {
