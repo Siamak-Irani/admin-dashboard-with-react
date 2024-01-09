@@ -12,7 +12,7 @@ import { ChartElementsPosition } from "../lib/type";
 
 ChartJS.register(BarController, BarElement, CategoryScale, LinearScale);
 
-export type SparklineAreaDataType = { x: number; y: number }[];
+export type SparklineAreaDataType = { x: number; yval: number }[];
 
 type BarChartProps = {
   chartData: SparklineAreaDataType;
@@ -22,10 +22,14 @@ type BarChartProps = {
 };
 
 const BarChart = ({ chartData, color, width, height }: BarChartProps) => {
+  const barChartData = chartData.map((item) => {
+    return { x: item.x, y: item.yval };
+  });
+
   const data = {
     datasets: [
       {
-        data: chartData,
+        data: barChartData,
         backgroundColor: color,
         barPercentage: 1.1,
       },

@@ -117,7 +117,10 @@ const Ecommerce = () => {
               </div>
 
               <div className="mt-5">
-                <SparkLine />
+                <SparkLine
+                  color={"rgba(75,192,192,1)"}
+                  chartData={SparklineAreaData}
+                />{" "}
               </div>
               <div className="mt-10">
                 <Button
@@ -129,7 +132,7 @@ const Ecommerce = () => {
               </div>
             </div>
             <div>
-              <Stacked width="280px" height="320px" />
+              <Stacked width="320px" height="360px" />
             </div>
           </div>
         </div>
@@ -270,17 +273,12 @@ const Ecommerce = () => {
                 <p className={`text-${item.pcColor}`}>{item.amount}</p>
               </div>
             ))}
-            {/* <div className="mt-4">
+            <div className="mt-4">
               <SparkLine
-                "blue"={"blue"}
-                id="area-sparkLine"
-                height="160px"
-                type="Area"
-                data={SparklineAreaData}
-                width="320"
-                color="rgb(242, 252, 253)"
+                color={"rgba(75,192,192,1)"}
+                chartData={SparklineAreaData}
               />
-            </div> */}
+            </div>
           </div>
         </div>
         <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">

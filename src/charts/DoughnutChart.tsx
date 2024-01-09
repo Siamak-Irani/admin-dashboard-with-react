@@ -25,7 +25,7 @@ const DoughnutChart = ({ chartData, height }: DoughnutChartProps) => {
       {
         data: chartDataArray,
         backgroundColor: ["#00bdae", "#404041", "#367cd2", "#e56590"],
-        hoverOffset: 20,
+        hoverOffset: 5,
       },
     ],
   };

@@ -7,26 +7,32 @@ import {
   PointElement,
   LineElement,
 } from "chart.js";
+import LineChart from "./LineChart";
 
 Chart.register(LinearScale, PointElement, LineElement);
 
-function SparkLine() {
+type SparklineAreaDataType = { x: number; yval: number }[];
+
+type SparkLineProps = {
+  chartData: SparklineAreaDataType;
+  color: string;
+};
+
+function SparkLine({ chartData, color }: SparkLineProps) {
+  const lineChartData = chartData.map((item) => {
+    return { x: item.x, y: item.yval };
+  });
+
   return (
     <div className="chart-container">
       <Line
         data={{
           datasets: [
             {
-              data: [
-                { x: 1, y: 2 },
-                { x: 2, y: 6 },
-                { x: 3, y: 8 },
-                { x: 4, y: 5 },
-                { x: 5, y: 10 },
-              ],
-              borderColor: "rgba(75,192,192,1)",
+              data: lineChartData,
+              borderColor: color,
               borderWidth: 2,
-              pointRadius: 0,
+              pointRadius: 1,
             },
           ],
         }}
