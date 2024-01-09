@@ -22,8 +22,6 @@ type BarChartProps = {
 };
 
 const BarChart = ({ chartData, color, width, height }: BarChartProps) => {
-  console.log(chartData);
-
   const data = {
     datasets: [
       {

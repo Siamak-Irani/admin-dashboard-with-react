@@ -1,9 +1,5 @@
 import { BsCurrencyDollar } from "react-icons/bs";
-
-
-
 import welcomeBg from "../data/welcome-bg.svg";
-
 import Button from "../components/costum-elements/Button";
 import {
   SparklineAreaData,
@@ -19,6 +15,14 @@ import SparkLine from "../charts/SparkLine";
 import Stacked from "../charts/Stacked";
 import BarChart from "../charts/BarChart";
 import DoughnutChart from "../charts/DoughnutChart";
+import {
+  lineCustomSeries,
+  LinePrimaryXAxis,
+  LinePrimaryYAxis,
+} from "../data/dummy";
+import LineChart from "../charts/LineChart";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 const Ecommerce = () => {
   const currentMode = "Dark";
@@ -162,12 +166,6 @@ const Ecommerce = () => {
             </div>
 
             <div className="w-40">
-              {/* <Pie
-                id="pie-chart"
-                data={ecomPieChartData}
-                legendVisiblity={false}
-                height="160px"
-              /> */}
               <DoughnutChart chartData={ecomPieChartData} height="160px" />
             </div>
           </div>
@@ -217,13 +215,23 @@ const Ecommerce = () => {
           </div>
         </div>
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl w-96 md:w-760">
-          {/* <div className="flex justify-between items-center gap-2 mb-10">
+          <div className="flex justify-between items-center gap-2 mb-10">
             <p className="text-xl font-semibold">Sales Overview</p>
-            <DropDown currentMode={currentMode} />
-          </div> */}
-          {/* <div className="md:w-full overflow-auto">
-            <LineChart />
-          </div> */}
+            <Dropdown
+              options={["March 2021", "April 2021", "May 2021"]}
+              value={"March 2021"}
+              placeholder="Select an option"
+            />
+          </div>
+          <div className="md:w-full overflow-auto">
+            <LineChart
+              chartData={{
+                lineCustomSeries,
+                LinePrimaryXAxis,
+                LinePrimaryYAxis,
+              }}
+            />
+          </div>
         </div>
       </div>
 
