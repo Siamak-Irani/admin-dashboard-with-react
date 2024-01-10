@@ -1,17 +1,23 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  chat: false,
-  cart: false,
-  userProfile: false,
-  notification: false,
+  isClicked: {
+    chat: false,
+    cart: false,
+    userProfile: false,
+    notification: false,
+  },
 };
 
 const clickSlice = createSlice({
   initialState,
   name: "click",
-  reducers: {},
+  reducers: {
+    handleClick: (state, action: PayloadAction<string>) => {
+      state.isClicked = { ...state.isClicked, [action.payload]: true };
+    },
+  },
 });
 
-export default clickSlice.reducer
-export const clickActions = clickSlice.actions
+export default clickSlice.reducer;
+export const clickActions = clickSlice.actions;

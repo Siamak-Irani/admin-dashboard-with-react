@@ -44,7 +44,7 @@ const Ecommerce = () => {
             </div>
             <button
               type="button"
-              style={{ backgroundColor: "blue" }}
+              style={{ backgroundColor: currentColor}}
               className="text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full  p-4"
             >
               <BsCurrencyDollar />

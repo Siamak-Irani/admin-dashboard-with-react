@@ -13,6 +13,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Ecommerce />,
       },
+      { path: "ecommerce", element: <Ecommerce /> },
     ],
   },
 ]);
