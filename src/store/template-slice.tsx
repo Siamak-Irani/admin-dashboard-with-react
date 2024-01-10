@@ -19,6 +19,18 @@ const templateSlice = createSlice({
     setThemeSettings: (state, action: PayloadAction<boolean>) => {
       state.themeSettings = action.payload;
     },
+    setMode: (
+      state,
+      action: PayloadAction<React.ChangeEvent<HTMLInputElement>>
+    ) => {
+      const value = action.payload.target.value;
+      state.currentMode = value;
+      localStorage.setItem("themeMode", value);
+    },
+    setColor: (state, action: PayloadAction<string>) => {
+      state.currentColor = action.payload;
+      localStorage.setItem("colorMode", action.payload);
+    },
   },
 });
 

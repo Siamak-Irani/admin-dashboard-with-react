@@ -1,6 +1,14 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { act } from "react-dom/test-utils";
 
-const initialState = {
+type IsClicked = {
+  chat: boolean;
+  cart: boolean;
+  userProfile: boolean;
+  notification: boolean;
+};
+
+const initialState: { isClicked: IsClicked } = {
   isClicked: {
     chat: false,
     cart: false,
@@ -15,6 +23,13 @@ const clickSlice = createSlice({
   reducers: {
     handleClick: (state, action: PayloadAction<string>) => {
       state.isClicked = { ...state.isClicked, [action.payload]: true };
+    },
+    setIsClicked: (state, action: PayloadAction<IsClicked>) => {
+      console.log(action.payload);
+      state.isClicked = action.payload;
+    },
+    setToInitialState: (state) => {
+      state.isClicked = initialState.isClicked;
     },
   },
 });

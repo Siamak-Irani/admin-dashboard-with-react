@@ -6,9 +6,11 @@ import TooltipComponent from "../components/costum-elements/TooltipComponent";
 import { templateActions } from "../store/template-slice";
 import Sidebar from "../components/root-layout/Sidebar";
 import Navbar from "../components/root-layout/nav-bar/Navbar";
+import ThemeSettings from "../components/root-layout/ThemeSettings";
+import Footer from "../components/Footer";
 
 const RootLayout = () => {
-  const { currentMode, currentColor } = useAppSelector(
+  const { currentMode, currentColor, themeSettings } = useAppSelector(
     (state) => state.template
   );
 
@@ -53,7 +55,14 @@ const RootLayout = () => {
             <Navbar />
           </div>
 
+          <div>
+          {themeSettings && <ThemeSettings />}
+
+
           <Outlet />
+          <Footer />
+          </div>
+
         </div>
       </div>
     </div>
