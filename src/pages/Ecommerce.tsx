@@ -23,9 +23,11 @@ import {
 import LineChart from "../charts/LineChart";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import { useAppSelector } from "../store";
 
 const Ecommerce = () => {
-  const currentMode = "Dark";
+  const { currentMode, currentColor } = useAppSelector((state) => state.template);
+
   return (
     <div className="mt-24">
       <div className="flex flex-wrap lg:flex-nowrap justify-center ">
@@ -49,7 +51,7 @@ const Ecommerce = () => {
           <div className="mt-6">
             <Button
               color="white"
-              bgColor={"blue"}
+              bgColor={currentColor}
               text="Download"
               borderRadius="10px"
             />
@@ -118,14 +120,14 @@ const Ecommerce = () => {
 
               <div className="mt-5">
                 <SparkLine
-                  color={"rgba(75,192,192,1)"}
+                  color={currentColor}
                   chartData={SparklineAreaData}
                 />{" "}
               </div>
               <div className="mt-10">
                 <Button
                   color="white"
-                  bgColor={"blue"}
+                  bgColor={currentColor}
                   text="Download Report"
                   borderRadius="10px"
                 />
@@ -139,7 +141,7 @@ const Ecommerce = () => {
         <div>
           <div
             className=" rounded-2xl md:w-400 p-4 m-3"
-            style={{ backgroundColor: "blue" }}
+            style={{ backgroundColor: currentColor }}
           >
             <div className="flex justify-between items-center ">
               <p className="font-semibold text-white text-2xl">Earnings</p>
@@ -208,7 +210,7 @@ const Ecommerce = () => {
             <div className="mt-3">
               <Button
                 color="white"
-                bgColor={"blue"}
+                bgColor={currentColor}
                 text="Add"
                 borderRadius="10px"
               />
@@ -275,7 +277,7 @@ const Ecommerce = () => {
             ))}
             <div className="mt-4">
               <SparkLine
-                color={"rgba(75,192,192,1)"}
+                color={currentColor}
                 chartData={SparklineAreaData}
               />
             </div>
@@ -338,7 +340,7 @@ const Ecommerce = () => {
             <div className="mt-3">
               <Button
                 color="white"
-                bgColor={"blue"}
+                bgColor={currentColor}
                 text="Add"
                 borderRadius="10px"
               />
@@ -369,7 +371,7 @@ const Ecommerce = () => {
               <div className="mt-3">
                 <Button
                   color="white"
-                  bgColor={"blue"}
+                  bgColor={currentColor}
                   text="Read More"
                   borderRadius="10px"
                 />
