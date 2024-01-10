@@ -26,7 +26,9 @@ import "react-dropdown/style.css";
 import { useAppSelector } from "../store";
 
 const Ecommerce = () => {
-  const { currentMode, currentColor } = useAppSelector((state) => state.template);
+  const { currentMode, currentColor } = useAppSelector(
+    (state) => state.template
+  );
 
   return (
     <div className="mt-24">
@@ -119,10 +121,7 @@ const Ecommerce = () => {
               </div>
 
               <div className="mt-5">
-                <SparkLine
-                  color={currentColor}
-                  chartData={SparklineAreaData}
-                />{" "}
+                <SparkLine color={currentColor} chartData={SparklineAreaData} />{" "}
               </div>
               <div className="mt-10">
                 <Button
@@ -276,10 +275,7 @@ const Ecommerce = () => {
               </div>
             ))}
             <div className="mt-4">
-              <SparkLine
-                color={currentColor}
-                chartData={SparklineAreaData}
-              />
+              <SparkLine color={currentColor} chartData={SparklineAreaData} />
             </div>
           </div>
         </div>
