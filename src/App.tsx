@@ -5,6 +5,7 @@ import RootLayout from "./pages/RootLayout";
 import Ecommerce from "./pages/Ecommerce";
 import Orders from "./pages/Orders";
 import Employees from "./pages/Employees";
+import Customers from "./pages/Customers";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
       // },
       // { path: "ecommerce", element: <Ecommerce /> },
       // { path: "orders", element: <Orders /> },
-      {path:"employees", element: <Employees />}
+      // {path:"employees", element: <Employees />}
+      { path: "customers", element: <Customers /> },
     ],
   },
 ]);

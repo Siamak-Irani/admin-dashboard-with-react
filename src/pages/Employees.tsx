@@ -1,6 +1,4 @@
 import React from "react";
-import "ag-grid-community/styles/ag-grid.css"; // Core CSS
-import "ag-grid-community/styles/ag-theme-quartz.css"; // Theme
 import { ColDef, ICellRendererParams } from "ag-grid-community";
 import Header from "../components/Header";
 import GridTable from "../components/GridTable";
