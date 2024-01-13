@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./pages/RootLayout";
 import Ecommerce from "./pages/Ecommerce";
 import Orders from "./pages/Orders";
+import Employees from "./pages/Employees";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,8 @@ const router = createBrowserRouter([
       //   element: <Ecommerce />,
       // },
       // { path: "ecommerce", element: <Ecommerce /> },
-      { path: "orders", element: <Orders /> },
+      // { path: "orders", element: <Orders /> },
+      {path:"employees", element: <Employees />}
     ],
   },
 ]);
