@@ -8,6 +8,7 @@ import Employees from "./pages/Employees";
 import Customers from "./pages/Customers";
 import BigCalendar from "./pages/BigCalendar";
 import LineChartPage from "./pages/LineChartPage";
+import AreaChart from "./pages/AreaChartPage";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
       // {path:"employees", element: <Employees />}
       // { path: "customers", element: <Customers /> },
       // {path:"calendar", element:<BigCalendar />}
-      {path:"line", element:<LineChartPage />}
+      // {path:"line", element:<LineChartPage />}
+      {path:"area", element:<AreaChart />}
     ],
   },
 ]);
