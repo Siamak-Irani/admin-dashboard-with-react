@@ -6,6 +6,7 @@ import Ecommerce from "./pages/Ecommerce";
 import Orders from "./pages/Orders";
 import Employees from "./pages/Employees";
 import Customers from "./pages/Customers";
+import BigCalendar from "./pages/BigCalendar";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
       // { path: "ecommerce", element: <Ecommerce /> },
       // { path: "orders", element: <Orders /> },
       // {path:"employees", element: <Employees />}
-      { path: "customers", element: <Customers /> },
+      // { path: "customers", element: <Customers /> },
+      {path:"calendar", element:<BigCalendar />}
     ],
   },
 ]);

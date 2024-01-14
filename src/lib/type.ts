@@ -20,3 +20,8 @@ export type ChartElementsPosition =
   | "chartArea"
   | _DeepPartialObject<{ [scaleId: string]: number }>
   | undefined;
+
+export type CustomElementProps<T extends keyof JSX.IntrinsicElements> =
+  React.ComponentPropsWithoutRef<T> & {
+    children?: React.ReactNode;
+  };
