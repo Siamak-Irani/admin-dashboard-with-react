@@ -7,21 +7,23 @@ import Orders from "./pages/Orders";
 import Employees from "./pages/Employees";
 import Customers from "./pages/Customers";
 import BigCalendar from "./pages/BigCalendar";
+import LineChartPage from "./pages/LineChartPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     children: [
-      // {
-      //   index: true,
-      //   element: <Ecommerce />,
-      // },
+      {
+        index: true,
+        element: <Ecommerce />,
+      },
       // { path: "ecommerce", element: <Ecommerce /> },
       // { path: "orders", element: <Orders /> },
       // {path:"employees", element: <Employees />}
       // { path: "customers", element: <Customers /> },
-      {path:"calendar", element:<BigCalendar />}
+      // {path:"calendar", element:<BigCalendar />}
+      {path:"line", element:<LineChartPage />}
     ],
   },
 ]);
