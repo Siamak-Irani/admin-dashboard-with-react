@@ -44,7 +44,7 @@ import product6 from "./product6.jpg";
 import product7 from "./product7.jpg";
 import product8 from "./product8.jpg";
 
-export const gridOrderImage = (props) => (
+export const gridOrderImage = (props:any) => (
   <div>
     <img
       className="rounded-xl h-20 md:ml-3"
@@ -54,7 +54,7 @@ export const gridOrderImage = (props) => (
   </div>
 );
 
-export const gridOrderStatus = (props) => (
+export const gridOrderStatus = (props:any) => (
   <button
     type="button"
     style={{ background: props.StatusBg }}
@@ -78,7 +78,7 @@ export const kanbanGrid = [
 
   { headerText: "Done", keyField: "Close", allowToggle: true },
 ];
-const gridEmployeeProfile = (props) => (
+const gridEmployeeProfile = (props:any) => (
   <div className="flex items-center gap-2">
     <img
       className="rounded-full w-10 h-10"
@@ -89,7 +89,7 @@ const gridEmployeeProfile = (props) => (
   </div>
 );
 
-const gridEmployeeCountry = (props) => (
+const gridEmployeeCountry = (props:any) => (
   <div className="flex items-center justify-center gap-2">
     <GrLocation />
     <span>{props.Country}</span>
@@ -141,7 +141,7 @@ export const EditorData = () => (
     </h3>
   </div>
 );
-const customerGridImage = (props) => (
+const customerGridImage = (props:any) => (
   <div className="image flex gap-4">
     <img
       className="rounded-full w-10 h-10"
@@ -155,7 +155,7 @@ const customerGridImage = (props) => (
   </div>
 );
 
-const customerGridStatus = (props) => (
+const customerGridStatus = (props:any) => (
   <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
     <p
       style={{ background: props.StatusBg }}
@@ -544,18 +544,6 @@ export const links = [
         name: "calendar",
         icon: <AiOutlineCalendar />,
       },
-      {
-        name: "kanban",
-        icon: <BsKanban />,
-      },
-      {
-        name: "editor",
-        icon: <FiEdit />,
-      },
-      {
-        name: "color-picker",
-        icon: <BiColorFill />,
-      },
     ],
   },
   {
@@ -568,31 +556,6 @@ export const links = [
       {
         name: "area",
         icon: <AiOutlineAreaChart />,
-      },
-
-      {
-        name: "bar",
-        icon: <AiOutlineBarChart />,
-      },
-      {
-        name: "pie",
-        icon: <FiPieChart />,
-      },
-      {
-        name: "financial",
-        icon: <RiStockLine />,
-      },
-      {
-        name: "color-mapping",
-        icon: <BsBarChart />,
-      },
-      {
-        name: "pyramid",
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: "stacked",
-        icon: <AiOutlineBarChart />,
       },
     ],
   },
@@ -2958,14 +2921,12 @@ export const dropdownData = [
   },
 ];
 
-
 export const SparklineAreaData = [
   { x: 1, yval: 2 },
   { x: 2, yval: 6 },
   { x: 3, yval: 8 },
   { x: 4, yval: 5 },
   { x: 5, yval: 10 },
-
 ];
 
 export const lineCustomSeries = [

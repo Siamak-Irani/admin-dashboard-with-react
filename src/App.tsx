@@ -19,13 +19,13 @@ const router = createBrowserRouter([
         index: true,
         element: <Ecommerce />,
       },
-      // { path: "ecommerce", element: <Ecommerce /> },
-      // { path: "orders", element: <Orders /> },
-      // {path:"employees", element: <Employees />}
-      // { path: "customers", element: <Customers /> },
-      // {path:"calendar", element:<BigCalendar />}
-      // {path:"line", element:<LineChartPage />}
-      {path:"area", element:<AreaChart />}
+      { path: "ecommerce", element: <Ecommerce /> },
+      { path: "orders", element: <Orders /> },
+      { path: "employees", element: <Employees /> },
+      { path: "customers", element: <Customers /> },
+      { path: "calendar", element: <BigCalendar /> },
+      { path: "line", element: <LineChartPage /> },
+      { path: "area", element: <AreaChart /> },
     ],
   },
 ]);
