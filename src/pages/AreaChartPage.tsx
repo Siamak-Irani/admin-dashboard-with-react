@@ -1,9 +1,9 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 import { areaCustomSeries } from "../data/dummy";
-import { Chart as ChartJS, Filler } from "chart.js";
-import { ChartOptions } from "chart.js";
-ChartJS.register(Filler);
+import { Chart as ChartJS, Filler, CategoryScale, LinearScale, PointElement, LineElement } from "chart.js";
+// import { ChartOptions } from "chart.js";
+ChartJS.register(Filler, CategoryScale , LinearScale,PointElement, LineElement);
 
 const labels = areaCustomSeries[0].dataSource.map(
   (item) => item.x.toISOString().split("T")[0]
@@ -53,7 +53,7 @@ function AreaChart() {
     ],
   };
 
-  const options: ChartOptions = {
+  const options = {
     plugins: {
       legend: {
         labels: {
@@ -73,6 +73,9 @@ function AreaChart() {
       intersect: false,
     },
   };
+
+
+  
 
   return (
     <div className="w-10/12 mx-auto my-4">

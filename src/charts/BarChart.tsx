@@ -12,6 +12,7 @@ import { ChartElementsPosition } from "../lib/type";
 
 ChartJS.register(BarController, BarElement, CategoryScale, LinearScale);
 
+
 export type SparklineAreaDataType = { x: number; yval: number }[];
 
 type BarChartProps = {

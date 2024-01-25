@@ -1,4 +1,4 @@
-import { ChartData, ChartOptions } from "chart.js";
+import { ChartData, ChartOptions, PointElement } from "chart.js";
 import React from "react";
 import { Chart } from "react-chartjs-2";
 import ChartJSDatalabels from "chartjs-plugin-datalabels";
@@ -6,7 +6,7 @@ import "chartjs-plugin-datalabels";
 
 import { Chart as ChartJS, DoughnutController, ArcElement } from "chart.js";
 
-ChartJS.register(DoughnutController, ArcElement, ChartJSDatalabels);
+ChartJS.register(DoughnutController, ArcElement, ChartJSDatalabels, PointElement);
 
 type EcomPieChartData = { x: string; y: number; text: string }[];
 
